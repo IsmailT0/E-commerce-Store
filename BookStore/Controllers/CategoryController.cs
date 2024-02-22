@@ -105,7 +105,7 @@ namespace BookStore.Controllers
             //{
             //    ModelState.AddModelError("", "Test is a invalid name.");
             //}
-            Category obj = _context.Categories.Find(id);
+            Category? obj = _context.Categories.Find(id);
             if (obj == null) { return NotFound(); }
             
             _context.Categories.Remove(obj);
